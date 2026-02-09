@@ -818,8 +818,8 @@ img {
 }
 /*===== FOOTER =====*/
 .footer {
-    background: #0f172a;
-    color: #fff;
+   background: #ffffff;
+    color: #111;
     text-align: center;
     padding: 2rem 0;
 }
@@ -835,7 +835,7 @@ img {
 
 .footer__icon {
     font-size: 1.4rem;
-    color: #fff;
+   color: #111;
     margin: 0 10px;
     transition: 0.3s;
 }
@@ -848,4 +848,5 @@ img {
     font-size: 0.85rem;
     opacity: 0.7;
 }
+
 
