@@ -318,6 +318,7 @@ img {
     border: 5px solid white;
     box-shadow: 0 20px 60px var(--shadow-color), 0 0 0 1px rgba(167, 139, 250, 0.1);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: -60px;
 }
 
     .home__blob-img:hover {
@@ -727,9 +728,9 @@ img {
     }
 
     .home__blob-img {
-        width: 100%;
-        height: auto;
-        max-width: 120px;    /* ensures image fits well */
+        width: 250px;
+        height: 250px;
+        max-width: 250px;    /* ensures image fits well */
     }
 }
 
