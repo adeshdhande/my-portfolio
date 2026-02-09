@@ -457,6 +457,24 @@ img {
     height: 4px;
     border-radius: 7px;
     z-index: -10;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+.skills__html.animate {
+    width: 70%;
+}
+
+.skills__css.animate {
+    width: 70%;
+}
+
+.skills__js.animate {
+    width: 60%;
+}
+
+.skills__ux.animate {
+    width: 75%;
 }
 
 .skills__html {
