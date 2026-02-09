@@ -1,49 +1,45 @@
-/*===== MENU SHOW =====*/
-const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId)
-    
-    if (toggle && nav) {
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('show')
-            console.log('Menu toggled!') // Debug sathi
-        })
-    } else {
-        console.error('Toggle or Nav element not found!') // Debug sathi
-    }
-}
-showMenu('nav-toggle', 'nav-menu')
+/*===== MENU SHOW/HIDE =====*/
+const navMenu = document.getElementById('nav-menu');
+const navToggle = document.getElementById('nav-toggle');
+const navClose = document.getElementById('nav-close');
 
-/*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link')
+/* Menu Show */
+if(navToggle) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.add('show');
+        console.log('Menu opened'); // Debug
+    });
+}
+
+/* Menu Hide */
+const navLink = document.querySelectorAll('.nav__link');
 
 function linkAction() {
-    const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show class
-    navMenu.classList.remove('show')
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.remove('show');
+    console.log('Menu closed'); // Debug
 }
-navLink.forEach(n => n.addEventListener('click', linkAction))
+navLink.forEach(n => n.addEventListener('click', linkAction));
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
+const sections = document.querySelectorAll('section[id]');
 
-const scrollActive = () => {
-    const scrollDown = window.scrollY
+function scrollActive() {
+    const scrollY = window.pageYOffset;
 
     sections.forEach(current => {
-        const sectionHeight = current.offsetHeight,
-            sectionTop = current.offsetTop - 58,
-            sectionId = current.getAttribute('id'),
-            sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        const sectionId = current.getAttribute('id');
 
-        if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
-            sectionsClass.classList.add('active-link')
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link');
         } else {
-            sectionsClass.classList.remove('active-link')
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link');
         }
-    })
+    });
 }
-window.addEventListener('scroll', scrollActive)
+window.addEventListener('scroll', scrollActive);
 
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
@@ -51,7 +47,6 @@ const sr = ScrollReveal({
     distance: '60px',
     duration: 2000,
     delay: 200,
-    // reset: true
 });
 
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text', {});
