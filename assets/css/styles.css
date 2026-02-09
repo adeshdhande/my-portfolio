@@ -403,16 +403,18 @@ img {
     font-weight: var(--font-semi);
     padding: 1.5rem 1rem;
     margin-bottom: var(--mb-4);
-    border-radius: 16px;
-    background: var(--card-bg);
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px);
     box-shadow: 0 10px 30px var(--shadow-color);
     transition: all 0.3s ease;
+    border: 1px solid rgba(167, 139, 250, 0.1);
 }
 
     .skills__data:hover {
         transform: translateY(-5px);
         box-shadow: 0 15px 40px var(--shadow-color);
+        background: rgba(255, 255, 255, 0.85);
     }
 
 .skills__icon {
@@ -427,13 +429,14 @@ img {
 
 .skills__bar {
     position: absolute;
-    left: 0;
+    left: 2px;
     bottom: 0;
     background-color: var(--primary-color);
     height: 4px;
-    border-radius: 0.5rem;
+    border-radius: 7px;
     z-index: -10;
 }
+
 
 .skills__html {
     width: 70%;
@@ -849,3 +852,4 @@ img {
         width: 450px;
     }
 }
+
