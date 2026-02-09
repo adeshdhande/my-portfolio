@@ -52,3 +52,23 @@ sr.reveal(".home__data, .about__img, .skills__subtitle, .skills__text");
 sr.reveal(".home__img, .about__subtitle, .about__text, .skills__img", { delay: 400 });
 sr.reveal(".home__social-icon", { interval: 200 });
 sr.reveal(".skills__data, .work__img, .contact__input", { interval: 200 });
+
+
+// ===== Animate Skill Bars on Scroll =====
+function animateBarsOnScroll() {
+    const bars = document.querySelectorAll(".skills__bar");
+    const trigger = window.innerHeight * 0.85;
+
+    bars.forEach(bar => {
+        const rectTop = bar.getBoundingClientRect().top;
+
+        if (rectTop < trigger && !bar.classList.contains("animated")) {
+            bar.classList.add("animated");
+            const percent = bar.getAttribute("data-percent");
+            bar.style.width = percent + "%";
+        }
+    });
+}
+
+window.addEventListener("scroll", animateBarsOnScroll);
+window.addEventListener("load", animateBarsOnScroll);
