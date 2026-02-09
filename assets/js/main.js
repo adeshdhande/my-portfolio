@@ -1,14 +1,14 @@
-// ===== MOBILE MENU =====
+// ===== MOBILE MENU TOGGLE =====
 const navMenu = document.getElementById("nav-menu");
 const navToggle = document.getElementById("nav-toggle");
 
-if (navToggle) {
+if (navToggle && navMenu) {
     navToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("show-menu"); // Changed from 'show' to 'show-menu'
+        navMenu.classList.toggle("show-menu");
     });
 }
 
-// Close menu when clicking on a link
+// Close menu when clicking on nav links
 const navLinks = document.querySelectorAll(".nav__link");
 navLinks.forEach(link => {
     link.addEventListener("click", () => {
@@ -41,7 +41,7 @@ function scrollActive() {
 
 window.addEventListener("scroll", scrollActive);
 
-// ===== SCROLL REVEAL =====
+// ===== SCROLL REVEAL ANIMATION =====
 const sr = ScrollReveal({
     origin: "top",
     distance: "60px",
