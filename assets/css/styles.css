@@ -917,6 +917,11 @@ img {
 .show {
     right: 0 !important;
 }
+@media screen and (max-width: 768px) {
+  .nav__menu { right: -100%; transition: 0.3s; }
+  .nav__menu.show { right: 0; }
+}
+
 
 
 
