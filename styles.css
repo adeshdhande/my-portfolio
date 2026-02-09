@@ -696,44 +696,44 @@ img {
 
     .home__data {
         margin-top: 0;
-        margin-left:65px;
+        margin-left: 65px;
     }
 
 
 
 
 
-/* Mobile - max 767px */
-@media screen and (max-width: 767px) {
-    .home {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 2rem; /* reduce top padding */
-    }
+    /* Mobile - max 767px */
+    @media screen and (max-width: 767px) {
+        .home {
+            flex-direction: column;
+            text-align: center;
+            padding-top: 2rem; /* reduce top padding */
+        }
 
-    .home__data {
-        margin-top: 0; /* remove extra top margin */
-    }
+        .home__data {
+            margin-top: 0; /* remove extra top margin */
+        }
 
-    .home__social {
-        justify-content: center;
-        margin-bottom: 0; /* no extra spacing below icons */
-    }
+        .home__social {
+            justify-content: center;
+            margin-bottom: 0; /* no extra spacing below icons */
+        }
 
-    .home__img {
-        position: relative;
-        width: 120px;        /* smaller image if needed */
-        margin-top: -100px;  /* very small gap between icons and image */
-        bottom: 0;
-        right: auto;
-    }
+        .home__img {
+            position: relative;
+            width: 120px; /* smaller image if needed */
+            margin-top: -100px; /* very small gap between icons and image */
+            bottom: 0;
+            right: auto;
+        }
 
-    .home__blob-img {
-        width: 250px;
-        height: 250px;
-        max-width: 250px;    /* ensures image fits well */
+        .home__blob-img {
+            width: 250px;
+            height: 250px;
+            max-width: 250px; /* ensures image fits well */
+        }
     }
-}
 
 
 
