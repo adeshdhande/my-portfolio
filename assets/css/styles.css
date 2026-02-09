@@ -816,3 +816,36 @@ img {
         width: 450px;
     }
 }
+/*===== FOOTER =====*/
+.footer {
+    background: #0f172a;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer__social {
+    margin-bottom: 1rem;
+}
+
+.footer__icon {
+    font-size: 1.4rem;
+    color: #fff;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.footer__icon:hover {
+    color: #a78bfa;
+}
+
+.footer__copy {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
