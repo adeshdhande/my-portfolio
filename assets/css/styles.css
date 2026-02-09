@@ -71,7 +71,7 @@ body {
     overflow-x: hidden;
 }
 
-    body::before {
+    body::before { 
         content: '';
         position: fixed;
         top: 0;
@@ -180,8 +180,6 @@ img {
     cursor: pointer;
     color: var(--primary-dark);
 }
-
-/* ===== MOBILE ===== */
 @media screen and (max-width: 768px) {
     .nav__menu {
         position: fixed;
@@ -191,8 +189,9 @@ img {
         height: calc(100vh - var(--header-height));
         background: #fff;
         padding: 2rem;
-        transition: 0.4s ease;
+        transition: right 0.3s ease;
         box-shadow: -4px 0 15px rgba(0,0,0,0.1);
+        z-index: var(--z-fixed);
     }
 
     .nav__list {
@@ -202,13 +201,14 @@ img {
 
     .nav__toggle {
         display: block;
+        z-index: 1001;
+    }
+
+    .show-menu {
+        right: 0;
     }
 }
 
-/* show menu */
-.show-menu {
-    right: 0;
-}
 
 
 /* Desktop - Default */
@@ -924,4 +924,5 @@ img {
     right: 0 !important;
     display: block !important;
 }
+
 
