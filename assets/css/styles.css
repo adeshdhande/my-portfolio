@@ -917,10 +917,21 @@ img {
 .show {
     right: 0 !important;
 }
+
+
+/* ===== ONLY HAMBURGER ICON VISIBLE ===== */
 @media screen and (max-width: 768px) {
-  .nav__menu { right: -100%; transition: 0.3s; }
-  .nav__menu.show { right: 0; }
+  .nav__menu {
+    display: none;   /* menu completely hide */
+  }
+
+  .nav__toggle {
+    display: block;  /* ☰ icon visible */
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
 }
+
 
 
 
