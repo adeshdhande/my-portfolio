@@ -237,6 +237,7 @@ img {
     align-self: center;
     animation: fadeInLeft 0.8s ease;
     margin-top: -120px;
+    margin-left: 60px;
 }
 
 @keyframes fadeInLeft {
@@ -892,3 +893,4 @@ img {
         padding-right: 2rem;
     }
 }
+
