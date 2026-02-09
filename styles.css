@@ -237,7 +237,6 @@ img {
     align-self: center;
     animation: fadeInLeft 0.8s ease;
     margin-top: -120px;
-    margin-left: 60px;
 }
 
 @keyframes fadeInLeft {
@@ -698,10 +697,31 @@ img {
         margin-top: 0;
     }
 
+
+
+
+
+/* Mobile - max 767px */
+@media screen and (max-width: 767px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 2rem; /* reduce top padding */
+    }
+
+    .home__data {
+        margin-top: 0; /* remove extra top margin */
+    }
+
+    .home__social {
+        justify-content: center;
+        margin-bottom: 0; /* no extra spacing below icons */
+    }
+
     .home__img {
         position: relative;
-        width: 220px;
-        margin: 2rem auto 0;
+        width: 120px;        /* smaller image if needed */
+        margin-top: -100px;  /* very small gap between icons and image */
         bottom: 0;
         right: auto;
     }
@@ -709,12 +729,28 @@ img {
     .home__blob-img {
         width: 100%;
         height: auto;
-        max-width: 260px;
+        max-width: 120px;    /* ensures image fits well */
     }
+}
 
-    .home__social {
-        justify-content: center;
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .about__img img {
         width: 100%;
