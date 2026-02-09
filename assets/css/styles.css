@@ -919,20 +919,9 @@ img {
 }
 
 
-/* ===== ONLY HAMBURGER ICON VISIBLE ===== */
-@media screen and (max-width: 768px) {
-  .nav__menu {
-    display: none;   /* menu completely hide */
-  }
 
-  .nav__toggle {
-    display: block;  /* ☰ icon visible */
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
+.show {
+    right: 0 !important;
+    display: block !important;
 }
-
-
-
-
 
